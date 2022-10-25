@@ -1,6 +1,6 @@
 class MeteorologistController < ApplicationController
   def street_to_weather
-    @street_address = params.fetch("address")
+    @street_address = params.fetch("street_address")
     
     maps_key = ENV.fetch("GEOCODING_API_KEY")
 

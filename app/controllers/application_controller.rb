@@ -18,4 +18,9 @@ end
 
 def calculate_forecast
 end
+def blank_street_to_weather_form
+  render({ :template => "meteorologist_templates/street_to_weather/"})
+end
+def calculate_weather
+end
 end

@@ -25,10 +25,12 @@ Rails.application.routes.draw do
 
   
   
-  
-  
+  #street_to_weather
+
+  get("/", { :controller => "meteorologist", :action => "street_to_weather_form" })
   
   get("/street-to-weather/new", { :controller => "meteorologist", :action => "street_to_weather_form" })
-  get("/street-to-weather/results", { :controller => "meteorologist", :action => "street_to_weather" })
+  
+  get("/street_to_weather/results", { :controller => "meteorologist", :action => "street_to_weather" })
   
 end
