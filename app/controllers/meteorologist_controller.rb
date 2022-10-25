@@ -43,6 +43,6 @@ class MeteorologistController < ApplicationController
   end
 
   def street_to_weather_form
-    render({ :template => "meteorologist_templates/street_to_weather_form.html.erb"})
+    render({ :template => "meteorologist_templates/street_to_weather_form.html.erb" })
   end
 end

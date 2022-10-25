@@ -1,23 +1,23 @@
 <form action="/calendar_invite/results">
   <div>
-    <label for="">Name</label>
-    <input type="text" name="name" id="">
+    <label for="event_name">Name</label>
+    <input type="text" name="name" id="event_name">
   </div>
   <div>
-    <label for="">Details</label>
-    <input type="text" name="details" id="">
+    <label for="event_details">Details</label>
+    <input type="text" name="details" id="event_details">
   </div>
   <div>
-    <label for="">Location</label>
-    <input type="text" name="location" id="">
+    <label for="event_location">Location</label>
+    <input type="text" name="location" id="event_location">
   </div>
   <div>
-    <label for="">Start time</label>
-    <input type="datetime-local" name="start_date" id="">
+    <label for="event_startime">Start time</label>
+    <input type="datetime-local" name="start_date" id="event_startime">
   </div>
   <div>
-    <label for="">End time</label>
-    <input type="datetime-local" name="end_date" id="">
+    <label for="event_endtime">End time</label>
+    <input type="datetime-local" name="end_date" id="event_endtime">
   </div>
   <button>Generate</button>
 </form>
@@ -29,4 +29,3 @@
 
 <h2>Copy me</h2>
 <textarea cols="80" rows="5"><%= @invite %></textarea>
-

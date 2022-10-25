@@ -1,11 +1,15 @@
 class GeocodingController < ApplicationController
 
-  def street_to_coords
-    @street_address = params.fetch("user_street_input")
+  def tocoords
+    render({ :template => "geocoding_templates/street_to_coords_new.html.erb"})
+  end
+
+  def require
+    @street_address = params.fetch("street_address")
     
     maps_key = ENV.fetch("GEOCODING_API_KEY")
 
-    url = "https://maps.googleapis.com/maps/api/geocode/json?key=" +  maps_key + "&address=" + @street_address
+    url = "https://maps.googleapis.com/maps/api/geocode/json?key=" +maps_key + "&address=" + @street_address
 
     api_response = URI.open(url).read
 
@@ -19,9 +23,5 @@ class GeocodingController < ApplicationController
     @longitude = location.fetch("lng")
 
     render({ :template => "geocoding_templates/street_to_coords_results.html.erb"})
-  end
-
-  def street_to_coords_form
-    render({ :template => "geocoding_templates/street_to_coords_form.html.erb"})
   end
 end
