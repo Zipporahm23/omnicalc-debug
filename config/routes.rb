@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   
   get("/coords-to-weather/new", { :controller => "forecast", :action => "coords_to_weather_form" })
   
-  get("/coords-to-weather/results", { :controller => "forecast", :action => "coords_to_weather" })
+  get("/coords_to_weather/results", { :controller => "forecast", :action => "coords_to_weather" })
 
   
   
